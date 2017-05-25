@@ -26,9 +26,10 @@ class ContactsController extends Controller
         
         $data = array(
             'name' => "Learning Laravel",
+            'horisontalBanners' => Banner::randHorisontal(3),
         );
 
-        Mail::send('emails.welcome', $data, function ($message) {
+        Mail::send('contacts', $data, function ($message) {
             $message->from('proujm@gmail.com', 'Learning Laravel');
             $message->to('proujm@gmail.com')->subject('Learning Laravel test email');
         });

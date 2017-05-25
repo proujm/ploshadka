@@ -22,9 +22,9 @@
             <div class="msgForm">
                 Форма обратной связи:
             </div>
-            <form action="{{route('web.contacts.store')}}" method="post">
-                <input type="hidden" name="_method" value="PUT">
-                {{csrf_field()}}
+            <form action="{{route('web.contacts.send')}}" method="get">
+                {{--<input type="hidden" name="_method" value="PUT">--}}
+                {{--{{csrf_field()}}--}}
                 <div class="messageContainer col-md-12 col-sm-12 col-xs-12 col-lg-12">
                     @if (Auth::guest())
                         <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
